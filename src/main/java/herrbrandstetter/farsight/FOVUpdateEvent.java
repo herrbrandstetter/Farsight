@@ -16,9 +16,8 @@ public class FOVUpdateEvent {
         Minecraft mc = Minecraft.getInstance();
 
         if (stack.getItem() == ItemRegistry.SPYGLASS.get() && mc.gameSettings.keyBindUseItem.isKeyDown()) {
-            // Values are hardcoded for now
-            event.setNewfov(event.getFov() / 4);
-            mc.gameSettings.smoothCamera = true;
+            event.setNewfov(event.getFov() / FarsightConfig.FOV_MODIFIER.get());
+            mc.gameSettings.smoothCamera = FarsightConfig.SMOOTH_CAMERA.get();
         } else {
             mc.gameSettings.smoothCamera = false;
         }
