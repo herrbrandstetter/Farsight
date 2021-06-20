@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " GP",
+    "GPG",
+    "LG "
+  ],
+  "key": {
+    "G": { "item": "minecraft:gold_ingot" },
+    "P": { "item": "minecraft:glass_pane" },
+    "L": { "item": "minecraft:leather" }
+  },
+  "result": {
+    "item": "farsight:spyglass"
+  }
+}
