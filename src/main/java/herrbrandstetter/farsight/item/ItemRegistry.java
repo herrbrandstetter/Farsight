@@ -1,5 +1,6 @@
-package herrbrandstetter.farsight;
+package herrbrandstetter.farsight.item;
 
+import herrbrandstetter.farsight.Farsight;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;

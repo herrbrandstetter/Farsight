@@ -3,9 +3,9 @@ loaderVersion="[36,)"
 license="MIT"
 [[mods]]
 modId="farsight"
-version="1.0.0"
+version="1.1.0-1.16.5"
 displayName="Farsight"
-#logoFile="farsight.png"
+logoFile="farsight.png"
 authors="HerrBrandstetter"
 description='''
 Placeholder

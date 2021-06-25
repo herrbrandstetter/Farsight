@@ -1,4 +1,4 @@
-package herrbrandstetter.farsight;
+package herrbrandstetter.farsight.item;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;

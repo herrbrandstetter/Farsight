@@ -1,5 +1,8 @@
-package herrbrandstetter.farsight;
+package herrbrandstetter.farsight.event;
 
+import herrbrandstetter.farsight.Farsight;
+import herrbrandstetter.farsight.util.FarsightConfig;
+import herrbrandstetter.farsight.item.ItemRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -18,8 +21,10 @@ public class FOVUpdateEvent {
         if (stack.getItem() == ItemRegistry.SPYGLASS.get() && mc.gameSettings.keyBindUseItem.isKeyDown()) {
             event.setNewfov(event.getFov() / FarsightConfig.FOV_MODIFIER.get());
             mc.gameSettings.smoothCamera = FarsightConfig.SMOOTH_CAMERA.get();
+            RenderGameOverlayEvent.shouldRenderOverlay = true;
         } else {
             mc.gameSettings.smoothCamera = false;
+            RenderGameOverlayEvent.shouldRenderOverlay = false;
         }
     }
 }

@@ -1,5 +1,7 @@
 package herrbrandstetter.farsight;
 
+import herrbrandstetter.farsight.item.ItemRegistry;
+import herrbrandstetter.farsight.util.FarsightConfig;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
