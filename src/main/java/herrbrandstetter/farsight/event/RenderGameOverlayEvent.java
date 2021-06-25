@@ -17,6 +17,11 @@ public class RenderGameOverlayEvent {
     private static final ResourceLocation OVERLAY_LOCATION = new ResourceLocation("farsight:textures/screen/spyglass_scope.png");
     private static final Minecraft MC = Minecraft.getInstance();
 
+    /* The following section was mainly written by Alyce Osbourne (https://github.com/AlyceOsbourne).
+     * Please check out her own projects.
+     * Thanks very much for the great help!
+     */
+
     @SubscribeEvent
     public static void renderOverlay(net.minecraftforge.client.event.RenderGameOverlayEvent.Pre event) {
         if (FarsightConfig.SCOPE_OVERLAY.get()) {
