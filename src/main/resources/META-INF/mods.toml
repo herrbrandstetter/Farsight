@@ -6,6 +6,7 @@ modId="farsight"
 version="1.1.0-1.16.5"
 displayName="Farsight"
 logoFile="farsight.png"
+itemIcon="farsight:spyglass"
 authors="HerrBrandstetter"
 description='''
 Placeholder
