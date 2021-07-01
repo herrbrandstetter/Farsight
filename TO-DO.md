@@ -4,4 +4,5 @@
     * Modifying zoom amount ✅
     * Toggling smooth camera ✅
     * Toggling overlay rendering ✅
-* Maybe add scrolling mechanic while zooming?
+* Add scrolling mechanic while zooming ✅
+* Add third-person animation while zooming

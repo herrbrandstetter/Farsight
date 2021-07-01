@@ -11,11 +11,11 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@Mod("farsight")
+@Mod("farsight_spyglasses")
 @Mod.EventBusSubscriber(modid = Farsight.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class Farsight {
     public static final Logger LOGGER = LogManager.getLogger();
-    public static final String MOD_ID = "farsight";
+    public static final String MOD_ID = "farsight_spyglasses";
 
     public Farsight() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
