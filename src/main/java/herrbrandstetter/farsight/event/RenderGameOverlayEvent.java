@@ -25,24 +25,21 @@ public class RenderGameOverlayEvent {
 
     @SubscribeEvent
     public static void renderOverlay(net.minecraftforge.client.event.RenderGameOverlayEvent.Pre event) {
-        if (FarsightConfig.SCOPE_OVERLAY.get()) {
+        if (shouldRenderOverlay && FarsightConfig.SCOPE_OVERLAY.get()) {
+            event.setCanceled(true);
+
             MainWindow window = event.getWindow();
             MatrixStack matrixStack = event.getMatrixStack();
             int width = window.getScaledWidth();
             int height = window.getScaledHeight();
-            int textureHeight = height;
-            int textureWidth = textureHeight * 3;
+            int textureWidth = height * 3;
 
             MC.getTextureManager().bindTexture(OVERLAY_LOCATION);
-
-            if (shouldRenderOverlay) {
-                event.setCanceled(true);
-                matrixStack.push();
-                RenderSystem.enableAlphaTest();
-                RenderSystem.enableBlend();
-
-                AbstractGui.blit(matrixStack, 0, 0, ((float) (textureWidth - width) / 2), 0f, width, height, textureWidth, textureHeight);
-            }
+            matrixStack.push();
+            RenderSystem.enableAlphaTest();
+            RenderSystem.enableBlend();
+            AbstractGui.blit(matrixStack, 0, 0, ((float) (textureWidth - width) / 2), 0f, width, height, textureWidth, height);
         }
     }
 }
+
