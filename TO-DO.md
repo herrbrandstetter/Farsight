@@ -6,3 +6,4 @@
     * Toggling overlay rendering ✅
 * Add scrolling mechanic while zooming ✅
 * Add third-person animation while zooming
+* Add Curios support (with keybind)
