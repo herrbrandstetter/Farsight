@@ -13,8 +13,8 @@ import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = Farsight.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
 public class FOVUpdateEvent {
-    private static final int fovModifier = FarsightConfig.FOV_MODIFIER.get();
-    private static int currentModifier = fovModifier;
+    private static final int FOV_MODIFIER = FarsightConfig.FOV_MODIFIER.get();
+    private static int currentModifier = FOV_MODIFIER;
 
     @SubscribeEvent
     public static void updateFOV(net.minecraftforge.client.event.FOVUpdateEvent event) {
@@ -29,7 +29,7 @@ public class FOVUpdateEvent {
         } else {
             mc.gameSettings.smoothCamera = false;
             RenderGameOverlayEvent.shouldRenderOverlay = false;
-            currentModifier = fovModifier;
+            currentModifier = FOV_MODIFIER;
         }
     }
 

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "farsight:items/spyglass"
+    "layer0": "farsight_spyglasses:items/spyglass"
   }
 }

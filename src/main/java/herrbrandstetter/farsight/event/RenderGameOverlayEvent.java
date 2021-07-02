@@ -15,7 +15,7 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(modid = Farsight.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
 public class RenderGameOverlayEvent {
     public static boolean shouldRenderOverlay = false;
-    private static final ResourceLocation OVERLAY_LOCATION = new ResourceLocation("farsight:textures/screen/spyglass_scope.png");
+    private static final ResourceLocation OVERLAY_LOCATION = new ResourceLocation("farsight_spyglasses:textures/screen/spyglass_scope.png");
     private static final Minecraft MC = Minecraft.getInstance();
 
     /* The following section was mainly written by Alyce Osbourne (https://github.com/AlyceOsbourne).
@@ -24,6 +24,7 @@ public class RenderGameOverlayEvent {
      */
 
     @SubscribeEvent
+    @SuppressWarnings("deprecation")
     public static void renderOverlay(net.minecraftforge.client.event.RenderGameOverlayEvent.Pre event) {
         if (shouldRenderOverlay && FarsightConfig.SCOPE_OVERLAY.get()) {
             event.setCanceled(true);

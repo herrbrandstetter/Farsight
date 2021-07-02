@@ -11,6 +11,6 @@
     "L": { "item": "minecraft:leather" }
   },
   "result": {
-    "item": "farsight:spyglass"
+    "item": "farsight_spyglasses:spyglass"
   }
 }
