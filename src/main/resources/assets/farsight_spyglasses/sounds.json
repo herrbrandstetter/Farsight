@@ -1,0 +1,22 @@
+{
+  "item.spyglass_extension": {
+    "category": "item",
+    "subtitle": "item.spyglass_extension.sub",
+    "sounds": [
+      {
+        "name": "farsight_spyglasses:item/spyglass_extension",
+        "stream": true
+      }
+    ]
+  },
+  "item.what": {
+    "category": "item",
+    "subtitle": "item.what.sub",
+    "sounds": [
+      {
+        "name": "farsight_spyglasses:item/what_sound",
+        "stream": true
+      }
+    ]
+  }
+}

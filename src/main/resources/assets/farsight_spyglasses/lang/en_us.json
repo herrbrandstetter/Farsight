@@ -1,3 +1,9 @@
 {
-  "item.farsight_spyglasses.spyglass": "Spyglass"
+  "item.farsight_spyglasses.spyglass": "Spyglass",
+  "item.spyglass_extension": "Spyglass extension",
+  "item.spyglass_extension.sub": "Spyglass extends",
+  "item.what": "WHAT spyglass extension",
+  "item.what.sub": "WHAT",
+  "key.farsight_spyglasses.zooming_key": "Zoom",
+  "key.category.farsight_spyglasses": "Farsight: Spyglasses"
 }

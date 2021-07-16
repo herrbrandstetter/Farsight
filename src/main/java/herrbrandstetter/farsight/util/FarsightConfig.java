@@ -9,6 +9,8 @@ public class FarsightConfig {
     public static ForgeConfigSpec.BooleanValue SMOOTH_CAMERA;
     public static ForgeConfigSpec.BooleanValue SCOPE_OVERLAY;
     public static ForgeConfigSpec.BooleanValue SCROLLING;
+    public static ForgeConfigSpec.BooleanValue ZOOM_KEY;
+    public static ForgeConfigSpec.BooleanValue WHAT_MEME;
 
     static {
         ForgeConfigSpec.Builder CLIENT_BUILDER = new ForgeConfigSpec.Builder();
@@ -24,8 +26,16 @@ public class FarsightConfig {
                 .comment("Whether the scope overlay should be rendered while zooming")
                 .define("scopeOverlay", true);
         SCROLLING = CLIENT_BUILDER
-                .comment("Whether scrolling should be enabled to dynamically change the FOV while zooming", "When enabled, FOV modifier is the initial zoom amount")
+                .comment("Whether scrolling should be enabled to dynamically change the FOV while zooming", "If enabled, FOV modifier is the initial zoom amount")
                 .define("scrolling", false);
+        ZOOM_KEY = CLIENT_BUILDER
+                .comment("Whether a zooming keybinding should be enabled to activate the spyglass from anywhere in the inventory",
+                        "Required when using the spyglass as a Curio",
+                        "If disabled, is not bound by default and has no effect")
+                .define("zoomingKey", false);
+        WHAT_MEME = CLIENT_BUILDER
+                .comment("Whether the Sanctuary Guardian What meme should be shown when zooming", "If enabled, sound and scope assets are replaced with the respective What assets")
+                .define("whatMeme", false);
         CLIENT_BUILDER.pop();
 
         CLIENT_CONFIG = CLIENT_BUILDER.build();

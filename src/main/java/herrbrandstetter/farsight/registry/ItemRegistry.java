@@ -1,6 +1,7 @@
-package herrbrandstetter.farsight.item;
+package herrbrandstetter.farsight.registry;
 
 import herrbrandstetter.farsight.Farsight;
+import herrbrandstetter.farsight.item.SpyglassItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;

@@ -3,11 +3,12 @@ loaderVersion="[36,)"
 license="MIT"
 [[mods]]
 modId="farsight_spyglasses"
-version="1.2.1-1.16.5"
+version="1.3.0-1.16.5"
 displayName="Farsight"
 logoFile="farsight.png"
 itemIcon="farsight_spyglasses:spyglass"
 authors="HerrBrandstetter"
+credits="Thanks to Blitzor for providing the What meme sound asset (https://mega.nz/file/fUcV2YzB#7b4hY5UCPC_2_gdAKOT3rdpwremiUWoCY-BzP2XnLYI)"
 description='''
 Farsight is a small mod that adds one feature: the Spyglass. Crafted from gold, glass and leather, it gives you access to zooming in a Vanilla friendly way.
 '''
@@ -23,3 +24,10 @@ mandatory=true
 versionRange="[1.16.5,1.17)"
 ordering="NONE"
 side="BOTH"
+[[dependencies.farsight_spyglasses]]
+modId="curios"
+mandatory=false
+versionRange="1.16.5-4.0.5.2,)"
+ordering="NONE"
+side="BOTH"
+

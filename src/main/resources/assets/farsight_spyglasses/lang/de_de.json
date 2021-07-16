@@ -1,3 +1,9 @@
 {
-  "item.farsight_spyglasses.spyglass": "Fernglas"
+  "item.farsight_spyglasses.spyglass": "Fernglas",
+  "item.spyglass_extension": "Fernglas aufziehen",
+  "item.spyglass_extension.sub": "Fernglas aufziehen",
+  "item.what": "WHAT Fernglas aufziehen",
+  "item.what.sub": "WHAT",
+  "key.farsight_spyglasses.zooming_key": "Zoom",
+  "key.category.farsight_spyglasses": "Farsight: Spyglasses"
 }

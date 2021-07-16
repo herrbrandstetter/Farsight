@@ -1,6 +1,7 @@
 buildscript {
     repositories {
         maven { url = 'https://maven.minecraftforge.net' }
+
         mavenCentral()
     }
     dependencies {
@@ -11,7 +12,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.2.1-1.16.5'
+version = '1.3.0-1.16.5'
 group = 'herrbrandstetter.farsight'
 archivesBaseName = 'farsight'
 
@@ -61,8 +62,14 @@ minecraft {
 
 // sourceSets.main.resources { srcDir 'src/generated/resources' }
 
+repositories {
+    maven { url = "https://maven.theillusivec4.top/" }
+}
+
 dependencies {
     minecraft 'net.minecraftforge:forge:1.16.5-36.1.25'
+    runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.16.5-4.0.5.2")
+    compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.16.5-4.0.5.2:api")
 }
 
 jar {

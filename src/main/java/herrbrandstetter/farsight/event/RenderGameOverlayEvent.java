@@ -15,7 +15,9 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(modid = Farsight.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
 public class RenderGameOverlayEvent {
     public static boolean shouldRenderOverlay = false;
-    private static final ResourceLocation OVERLAY_LOCATION = new ResourceLocation("farsight_spyglasses:textures/screen/spyglass_scope.png");
+    /* private static ResourceLocation OVERLAY_LOCATION = FarsightConfig.WHAT_MEME.get()
+            ? new ResourceLocation("farsight_spyglasses:textures/screen/what_scope.png")
+            : new ResourceLocation("farsight_spyglasses:textures/screen/spyglass_scope.png"); */
     private static final Minecraft MC = Minecraft.getInstance();
 
     /* The following section was mainly written by Alyce Osbourne (https://github.com/AlyceOsbourne).
@@ -35,7 +37,9 @@ public class RenderGameOverlayEvent {
             int height = window.getScaledHeight();
             int textureWidth = height * 3;
 
-            MC.getTextureManager().bindTexture(OVERLAY_LOCATION);
+            MC.getTextureManager().bindTexture(FarsightConfig.WHAT_MEME.get()
+                    ? new ResourceLocation("farsight_spyglasses:textures/screen/what_scope.png")
+                    : new ResourceLocation("farsight_spyglasses:textures/screen/spyglass_scope.png"));
             matrixStack.push();
             RenderSystem.enableAlphaTest();
             RenderSystem.enableBlend();
