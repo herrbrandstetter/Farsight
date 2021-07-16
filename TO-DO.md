@@ -6,6 +6,7 @@
     * Toggling overlay rendering ✅
 * Add scrolling mechanic while zooming ✅
 * Add Curios support ✅
+* Add optional zoom keybinding ✅
 * Add spyglass extension sound ✅
 * Add What meme option (user suggestion) ✅ 
 * Add third-person animation while zooming (some day)™️
