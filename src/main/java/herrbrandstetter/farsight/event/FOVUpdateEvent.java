@@ -32,6 +32,7 @@ public class FOVUpdateEvent {
             RenderGameOverlayEvent.shouldRenderOverlay = true;
             ticksZoomed++;
 
+            // 'w' for What sound / 'n' for normal sound
             if (ticksZoomed == 1) playSound(FarsightConfig.WHAT_MEME.get() ? 'w' : 'n');
         } else {
             MC.gameSettings.smoothCamera = false;

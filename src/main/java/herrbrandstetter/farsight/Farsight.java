@@ -16,7 +16,7 @@ import org.apache.logging.log4j.Logger;
 import top.theillusivec4.curios.api.SlotTypeMessage;
 import top.theillusivec4.curios.api.SlotTypePreset;
 
-@Mod("farsight_spyglasses")
+@Mod(Farsight.MOD_ID)
 @Mod.EventBusSubscriber(modid = Farsight.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class Farsight {
     public static final Logger LOGGER = LogManager.getLogger();
