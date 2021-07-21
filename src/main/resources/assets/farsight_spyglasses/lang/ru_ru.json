@@ -1,3 +1,9 @@
 {
-  "item.farsight_spyglasses.spyglass": "Подзорная труба"
+  "item.farsight_spyglasses.spyglass": "Подзорная труба",
+  "item.spyglass_extension": "Расширение подзорной трубы",
+  "item.spyglass_extension.sub": "Расширяет подзорную трубу",
+  "item.what": "КАКОЕ расширение подзорной трубы",
+  "item.what.sub": "ЧТО",
+  "key.farsight_spyglasses.zooming_key": "Увеличить",
+  "key.category.farsight_spyglasses": "Farsight: Подзорные трубы"
 }
