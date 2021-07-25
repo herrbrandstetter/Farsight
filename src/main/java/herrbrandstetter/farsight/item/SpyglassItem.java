@@ -6,6 +6,6 @@ import net.minecraft.item.Rarity;
 
 public class SpyglassItem extends Item {
     public SpyglassItem() {
-        super(new Item.Properties().group(ItemGroup.TOOLS).maxStackSize(1).rarity(Rarity.RARE));
+        super(new Item.Properties().tab(ItemGroup.TAB_TOOLS).stacksTo(1).rarity(Rarity.RARE));
     }
 }

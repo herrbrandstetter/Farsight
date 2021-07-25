@@ -24,18 +24,18 @@ public class FOVUpdateEvent {
     @SubscribeEvent
     public static void updateFOV(net.minecraftforge.client.event.FOVUpdateEvent event) {
         player = event.getEntity();
-        ItemStack stack = player.getHeldItem(Hand.MAIN_HAND);
+        ItemStack stack = player.getItemInHand(Hand.MAIN_HAND);
 
-        if ((stack.getItem() == ItemRegistry.SPYGLASS.get() && MC.gameSettings.keyBindUseItem.isKeyDown()) || KeyInputEvent.isZoomingByKey) {
+        if ((stack.getItem() == ItemRegistry.SPYGLASS.get() && MC.options.keyUse.isDown()) || KeyInputEvent.isZoomingByKey) {
             event.setNewfov(event.getFov() / currentModifier);
-            MC.gameSettings.smoothCamera = FarsightConfig.SMOOTH_CAMERA.get();
+            MC.options.smoothCamera = FarsightConfig.SMOOTH_CAMERA.get();
             RenderGameOverlayEvent.shouldRenderOverlay = true;
             ticksZoomed++;
 
             // 'w' for What sound / 'n' for normal sound
             if (ticksZoomed == 1) playSound(FarsightConfig.WHAT_MEME.get() ? 'w' : 'n');
         } else {
-            MC.gameSettings.smoothCamera = false;
+            MC.options.smoothCamera = false;
             RenderGameOverlayEvent.shouldRenderOverlay = false;
             currentModifier = FOV_MODIFIER;
             ticksZoomed = 0;
@@ -54,9 +54,9 @@ public class FOVUpdateEvent {
 
     private static void playSound(char option) {
         if (option == 'n') {
-            MC.world.playSound(player, player.getPosition(), SoundRegistry.SPYGLASS_EXTENSION.get(), SoundCategory.PLAYERS, 1.0f, 1.0f);
+            MC.level.playSound(player, player.blockPosition(), SoundRegistry.SPYGLASS_EXTENSION.get(), SoundCategory.PLAYERS, 1.0f, 1.0f);
         } else if (option == 'w') {
-            MC.world.playSound(player, player.getPosition(), SoundRegistry.SPYGLASS_WHAT.get(), SoundCategory.PLAYERS, 1.0f, 1.0f);
+            MC.level.playSound(player, player.blockPosition(), SoundRegistry.SPYGLASS_WHAT.get(), SoundCategory.PLAYERS, 1.0f, 1.0f);
         }
     }
 }

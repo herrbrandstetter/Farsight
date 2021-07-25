@@ -26,21 +26,24 @@ public class RenderGameOverlayEvent {
     @SuppressWarnings("deprecation")
     public static void renderOverlay(net.minecraftforge.client.event.RenderGameOverlayEvent.Pre event) {
         if (shouldRenderOverlay && FarsightConfig.SCOPE_OVERLAY.get()) {
+            MC.gameRenderer.renderHand = false;
             event.setCanceled(true);
 
             MainWindow window = event.getWindow();
             MatrixStack matrixStack = event.getMatrixStack();
-            int width = window.getScaledWidth();
-            int height = window.getScaledHeight();
+            int width = window.getGuiScaledWidth();
+            int height = window.getGuiScaledHeight();
             int textureWidth = height * 3;
 
-            MC.getTextureManager().bindTexture(FarsightConfig.WHAT_MEME.get()
+            MC.getTextureManager().bind(FarsightConfig.WHAT_MEME.get()
                     ? new ResourceLocation("farsight_spyglasses:textures/screen/what_scope.png")
                     : new ResourceLocation("farsight_spyglasses:textures/screen/spyglass_scope.png"));
-            matrixStack.push();
+            matrixStack.pushPose();
             RenderSystem.enableAlphaTest();
             RenderSystem.enableBlend();
             AbstractGui.blit(matrixStack, 0, 0, ((float) (textureWidth - width) / 2), 0f, width, height, textureWidth, height);
+        } else {
+            MC.gameRenderer.renderHand = true;
         }
     }
 }
