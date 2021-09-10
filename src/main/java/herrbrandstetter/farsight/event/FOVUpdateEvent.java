@@ -15,7 +15,7 @@ import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = Farsight.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
 public class FOVUpdateEvent {
-    private static final int FOV_MODIFIER = FarsightConfig.FOV_MODIFIER.get();
+    private static final int FOV_MODIFIER = FarsightConfig.fovModifier.get();
     private static final Minecraft MC = Minecraft.getInstance();
     private static PlayerEntity player;
     private static int currentModifier = FOV_MODIFIER;
@@ -28,12 +28,12 @@ public class FOVUpdateEvent {
 
         if ((stack.getItem() == ItemRegistry.SPYGLASS.get() && MC.options.keyUse.isDown()) || KeyInputEvent.isZoomingByKey) {
             event.setNewfov(event.getFov() / currentModifier);
-            MC.options.smoothCamera = FarsightConfig.SMOOTH_CAMERA.get();
+            MC.options.smoothCamera = FarsightConfig.smoothCamera.get();
             RenderGameOverlayEvent.shouldRenderOverlay = true;
             ticksZoomed++;
 
             // 'w' for What sound / 'n' for normal sound
-            if (ticksZoomed == 1) playSound(FarsightConfig.WHAT_MEME.get() ? 'w' : 'n');
+            if (ticksZoomed == 1) playSound(FarsightConfig.whatMeme.get() ? 'w' : 'n');
         } else {
             MC.options.smoothCamera = false;
             RenderGameOverlayEvent.shouldRenderOverlay = false;

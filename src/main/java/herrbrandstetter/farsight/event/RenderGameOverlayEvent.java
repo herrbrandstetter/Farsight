@@ -25,7 +25,7 @@ public class RenderGameOverlayEvent {
     @SubscribeEvent
     @SuppressWarnings("deprecation")
     public static void renderOverlay(net.minecraftforge.client.event.RenderGameOverlayEvent.Pre event) {
-        if (shouldRenderOverlay && FarsightConfig.SCOPE_OVERLAY.get()) {
+        if (shouldRenderOverlay && FarsightConfig.scopeOverlay.get()) {
             MC.gameRenderer.renderHand = false;
             event.setCanceled(true);
 
@@ -35,7 +35,7 @@ public class RenderGameOverlayEvent {
             int height = window.getGuiScaledHeight();
             int textureWidth = height * 3;
 
-            MC.getTextureManager().bind(FarsightConfig.WHAT_MEME.get()
+            MC.getTextureManager().bind(FarsightConfig.whatMeme.get()
                     ? new ResourceLocation("farsight_spyglasses:textures/screen/what_scope.png")
                     : new ResourceLocation("farsight_spyglasses:textures/screen/spyglass_scope.png"));
             matrixStack.pushPose();

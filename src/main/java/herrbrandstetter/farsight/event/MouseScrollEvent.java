@@ -11,7 +11,7 @@ import net.minecraftforge.fml.common.Mod;
 public class MouseScrollEvent {
     @SubscribeEvent
     public static void onMouseScroll(InputEvent.MouseScrollEvent event) {
-        if (FarsightConfig.SCROLLING.get()) {
+        if (FarsightConfig.scrolling.get()) {
             int delta = (int) event.getScrollDelta();
 
             if (RenderGameOverlayEvent.shouldRenderOverlay) {

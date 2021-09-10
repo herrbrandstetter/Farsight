@@ -31,7 +31,7 @@ public class Farsight {
 
         MinecraftForge.EVENT_BUS.register(this);
 
-        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, FarsightConfig.CLIENT_CONFIG);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, FarsightConfig.clientConfig);
     }
 
     public void enqueueIMC(final InterModEnqueueEvent event) {
