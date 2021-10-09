@@ -27,7 +27,7 @@ public class KeyInputEvent {
             isZoomingByKey = FarsightKeybinding.zoomingKey.isDown()
                     && (player.inventory.contains(ItemRegistry.SPYGLASS.get().getDefaultInstance())
                     || CuriosApi.getCuriosHelper().findEquippedCurio(ItemRegistry.SPYGLASS.get(), player).isPresent());
+            FOVUpdateEvent.zooming = isZoomingByKey;
         }
     }
 }
-
