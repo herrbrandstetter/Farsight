@@ -15,7 +15,7 @@ apply plugin: 'org.parchmentmc.librarian.forgegradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.4.1-1.16.5'
+version = '1.4.2-1.16.5'
 group = 'herrbrandstetter.farsight'
 archivesBaseName = 'farsight'
 

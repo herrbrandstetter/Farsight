@@ -25,6 +25,8 @@ public class MouseScrollEvent {
                     }
                 }
             }
+        } else if (FOVUpdateEvent.zooming) {
+            FOVUpdateEvent.zooming = false;
         }
     }
 }

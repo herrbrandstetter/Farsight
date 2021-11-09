@@ -3,7 +3,7 @@ loaderVersion="[36,)"
 license="MIT"
 [[mods]]
 modId="farsight_spyglasses"
-version="1.4.1-1.16.5"
+version="1.4.2-1.16.5"
 displayName="Farsight"
 logoFile="farsight.png"
 itemIcon="farsight_spyglasses:spyglass"
